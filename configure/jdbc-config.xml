@@ -1,0 +1,12 @@
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure id="jdbc" class="org.eclipse.jetty.plus.jndi.Resource">
+    <Arg></Arg>
+    <Arg>jdbc/yourDataSourceName</Arg> <!-- This is the JNDI name for your DataSource -->
+    <Arg>
+        <New class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
+                <Set name="URL">jdbc:mysql://team2-db.coccer63gd4o.ap-northeast-1.rds.amazonaws.com:3306/schema1</Set>
+            <Set name="User">admin</Set>
+            <Set name="Password">qwer1234</Set>
+        </New>
+    </Arg>
+</Configure>
