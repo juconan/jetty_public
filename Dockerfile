@@ -16,14 +16,14 @@ RUN mkdir -p ${JETTY_HOME} && \
 
 # application contents
 RUN mkdir -p ${JETTY_HOME}/webapps/ROOT
-COPY ./jetty/user/user_main.jsp ${JETTY_HOME}/webapps/ROOT/user_main.jsp
-COPY ./user_detail.jsp ${JETTY_HOME}/webapps/ROOT/user_detail.jsp
+COPY user_main.jsp ${JETTY_HOME}/webapps/ROOT/user_main.jsp
+COPY user_detail.jsp ${JETTY_HOME}/webapps/ROOT/user_detail.jsp
 
 
 
 # configure file
-COPY ../configure/jdbc-config.xml  ${JETTY_HOME}/etc/jdbc-config.xml
-COPY ../configure/index.jsp /opt/jetty/webapps/ROOT/index.jsp
+COPY ./configure/jdbc-config.xml  ${JETTY_HOME}/etc/jdbc-config.xml
+COPY ./configure/index.jsp /opt/jetty/webapps/ROOT/index.jsp
 
 
 
