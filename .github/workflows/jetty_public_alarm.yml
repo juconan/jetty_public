@@ -36,6 +36,6 @@ jobs:
 
 
       - name: Restart OpenShift Admin Build
-        run: oc start-build jetty_public --from-dir=$GITHUB_WORKSPACE
+        run: oc start-build jetty-public --from-dir=$GITHUB_WORKSPACE
 
   # ... 다른 빌드 작업들 ...
