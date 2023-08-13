@@ -46,4 +46,4 @@ EXPOSE 8080
 # Set the working directory to Jetty's base directory
 WORKDIR ${JETTY_HOME}
 # Start Jetty
-CMD ["nohup", "java", "-jar", "start.jar", ">/dev/null", "2>&1", "&"]
+CMD ["java", "-jar", "start.jar"]
