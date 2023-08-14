@@ -1,6 +1,16 @@
 # Use the official Ubuntu base image
 FROM ubuntu:22.04
 
+RUN wget https://repo.whatap.io/debian/release.gpg -O -| apt-key add -
+RUN wget https://repo.whatap.io/debian/whatap-repo_1.0_all.deb
+RUN dpkg -i whatap-repo_1.0_all.deb
+RUN apt-get update
+RUN apt-get install -y whatap-php
+
+RUN (echo "x4vil21bt9b7a-z176hludcjrgs-x1gt4gvub8mt24"; echo "52.68.36.166/52.193.60.176")|/usr/whatap/php/install.sh
+
+
+
 # Set environment variables
 ENV JETTY_VERSION=9.4.43.v20210629 \
     JETTY_HOME=/opt/jetty
