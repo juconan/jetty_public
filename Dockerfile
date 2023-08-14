@@ -1,6 +1,8 @@
 # Use the official Ubuntu base image
 FROM ubuntu:22.04
 
+RUN apt-get update && apt-get install -y wget gnupg gnupg2 gnupg1
+
 RUN wget https://repo.whatap.io/debian/release.gpg -O -| apt-key add -
 RUN wget https://repo.whatap.io/debian/whatap-repo_1.0_all.deb
 RUN dpkg -i whatap-repo_1.0_all.deb
